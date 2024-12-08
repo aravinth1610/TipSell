@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.tipSell.authKey</groupId>
+		<artifactId>AuthKey</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>Esecurity-Domain</artifactId>
+	<name>E-Security Domain</name>
+
+	<properties>
+		<uniCore>
+			/home/aravinth/Applications/Project/workSpace/TipSell/UniCore/target/UniCore-0.0.1.jar</uniCore>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.tipSell.uniCore</groupId>
+			<artifactId>UniCore</artifactId>
+			<version>0.0.1</version>
+			<scope>system</scope>
+			<type>jar</type>
+			<systemPath>${uniCore}</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+</project>

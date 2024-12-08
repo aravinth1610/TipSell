@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: TipSell-Registry
+server:
+    port: 9000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: true  # Not recommended for production environments for production need to be true
+    renewal-percent-threshold: 0.85 # Default is 0.85 (85%)

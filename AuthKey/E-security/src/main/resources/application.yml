@@ -1,0 +1,37 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /tipSell/authKey
+ 
+crypto:
+  secureKey: 2ck6gxUSAouHAgS6uFiftm0oatC64H7MYB3dIl/H9JA=
+  
+spring:
+  application:
+    name: Auth-Key
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss  
+  datasource:
+    username: root  # afmdemo381
+    password: my-secret-pw # afmdemo381
+    url:  jdbc:mariadb://localhost:3301/tipsell # jdbc:oracle:thin:@192.168.192.151:1521/aliswb
+    driver-class-name: org.mariadb.jdbc.Driver # org.oracle.jdbc.Driver
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        formatSql: true
+    hibernate:
+      ddl-auto: update        
+          
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0  # in productionn 2.6
